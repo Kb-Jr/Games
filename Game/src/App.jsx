@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import useSWR from 'swr';
 
+
 function fetcher(...args){
   fetch(...args).then((response) => response.json())
 }
@@ -20,7 +21,7 @@ function App() {
     fetch(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}&limit=3`).then((response) => response.json())
     .then((data) => {
       setsearchedGames(data);
-      console.log(data);
+      
     });
   };
 
